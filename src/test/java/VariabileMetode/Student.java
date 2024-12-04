@@ -10,4 +10,5 @@ public class Student {
         public Float Greutate;
         public Character Sex;
         public Boolean AreDiploma;
+        public String Prenume2;
 }
