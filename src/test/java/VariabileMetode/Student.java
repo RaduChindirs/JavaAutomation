@@ -11,4 +11,5 @@ public class Student {
         public Character Sex;
         public Boolean AreDiploma;
         public String Prenume2;
+
 }
