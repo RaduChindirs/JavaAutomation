@@ -12,6 +12,7 @@ public class Student {
     public Float Greutate;
     public Character Sex;
     public String AreDiploma;
+    public String Nationalitate;
 
     @Test
 
