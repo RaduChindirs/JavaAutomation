@@ -786,6 +786,9 @@ public class Homework {
         }
 
     }
+     //        Exercitiu 2
+    // Factorial Calculator: Create a program that calculates the factorial of a number provided by the user. Use a for loop to calculate the factorial.
+    // Remember, the factorial of n (n!) is the product of all positive integers less than or equal to n.
 
     }
 
