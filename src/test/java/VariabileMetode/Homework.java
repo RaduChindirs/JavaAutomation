@@ -9,65 +9,50 @@ public class Homework {
     @Test
     public static void Test() {
 //       perimetruDreptunghi(3, 9);
-//        convertTime(10);
-//        ariaPatrat(6);
-//        volumeOfCylinder(2.2, 5.8);
-//        convertesteTemperatura(125.4);
-//        calculIpotenuza(4.5, 8.4);
-//        comparareDouaNumere(7, 8);
-//        comparareDouaNumere(15, 9);
-//        comparareDouaNumere(78, 78);
-//        printBooleanValue();
-//        weatherCondition(true, true, true);
-//        weatherCondition(true, true, false);
-//        weatherCondition(false, true, false);
-//        weatherCondition(false, true, true);
-//        weatherCondition(false, false, false);
-//        printCharacter('M');
-//        convertCharacter();
-//        concatenateCharacter();
-//        string();
-//        concatenateTwoStrings();
-//        replaceCharacter();
-//        operatiiMatematice(16,8);
-//        compondAssignments();
-//        score();
-//        score2();
-//        passwordChecker();
+//       convertTime(10);
+//       ariaPatrat(6);
+//       volumeOfCylinder(2.2, 5.8);
+//       convertesteTemperatura(125.4);
+//       calculIpotenuza(6.5, 9.4);
+//       printBooleanValue();
+//       comparareDouaNumere(7, 7);
+//       weatherCondition(true, true, true);
+//       printCharacter('F');
+//       convertCharacter();
+//       concatenateCharacter();
+//       string();
+//       concatenateTwoStrings();
+//       replaceCharacter();
+//       operatiiMatematice(16,0);
+//       modulusMagic
+//       compondAssignments();
+//       score();
+//       passwordChecker();
+
+
+
 //        isLeapYear(2024);
-        //       calculator();
+//        calculator();
 //        traficLifght2("rosu");
-//        traficLifght2("galben");
-//        traficLifght2("verde");
-//        traficLifght2("albastru");
-
-        //      trafficLight("rosu");
-//        trafficLight("verde");
-//        trafficLight("galben");
-//        trafficLight("albastru");
-  //      password2();
  //       categoriObiecte();
-      //  tablaInmultirii(2);
-        tablaInmultiriiEachFor(4);
-
-
-
+//        tablaInmultirii(2);
+//        tablaInmultiriiEachFor(4);
+//        tabalaInmultiriiRadu(4);
     }
+
+
+
+
 //    Integer (int) Exercises
 //    Exercitiu 1
 //    Calculate the Perimeter of a Rectangle:
 //    Initialize two integers length and width with any values. Calculate and print the perimeter of a rectangle using these variables
-//    public static void perimetruDreptunghi() {
-//        Integer latime = 2;
-//        Integer lungime = 4;
-//        Integer perimetru = latime + latime + lungime + lungime;
-//        System.out.println("Perimetru dreptunghiului est :" + perimetru);
-//    }
 
     public static void perimetruDreptunghi(Integer latime, Integer lungime) {
         Integer perimetru = latime + latime + lungime + lungime;
-        System.out.println("Perimetrul dreptunghiului este:" + perimetru);
+        System.out.println("Perimetru unui dreptunghi cu latimea de " + latime + " lungimea de " + lungime + " este egala cu " + perimetru);
     }
+
 
     //    Exercitiu 2
 //    Convert Minutes into Seconds:
@@ -82,7 +67,7 @@ public class Homework {
 //    Initialize an integer side representing the side of a square. Calculate and print the area of the square
     public static void ariaPatrat(Integer latura) {
         Integer ariaPatratCalculata = latura * latura;
-        System.out.println("Aria patratului este egala cu  " + ariaPatratCalculata);
+        System.out.println("Aria patratului cu latura " + latura+ " este egala cu  " + ariaPatratCalculata);
     }
 
     //    Double (double) Exercises
@@ -117,30 +102,21 @@ public class Homework {
 //    Exercitiu 1
 //    Boolean Value Assignment and Printing
 //    Create a program that declares a boolean variable, assigns a value to it, and then prints it. This exercise helps you understand how to work with boolean variables.
-    public static void printBooleanValue() {
-        Boolean incepatorJava = true;
-        String numeCursant = "Radu";
-        System.out.println("Cursantul " + numeCursant + ", valoarea pt incepatorJava este " + incepatorJava);
+    public static void printBooleanValue(Boolean adult, Boolean diploma) {
+
+        System.out.println("User is an adult, " + adult + ". And he has a diploma, " + diploma);
     }
 
     //    Exercitiu 2
 //    Boolean Comparison
 //    Write a program that compares two integers using relational operators (e.g., <, >, <=, >=) and stores the result in a boolean variable. Then, print the result. This exercise demonstrates how comparison operations result in boolean values.
 //    public static void comparareDouaNumere(Integer numarulUnu, Integer numarulDoi) {
-//        Boolean verifcare = numarulUnu > numarulDoi;
-//        if (verifcare) {
-//            System.out.println("Numarul " + numarulUnu + " este mai mare decat " + numarulDoi);
-//        } else
-//            System.out.println("Numarul " + numarulUnu + " este mai mic " + numarulDoi);
-//
-//
-//
-//    }
+
 
     public static void comparareDouaNumere(Integer numarulUnu, Integer numarulDoi) {
-        Boolean verifcare = numarulUnu > numarulDoi;
+        Boolean verifcare1 = numarulUnu > numarulDoi;
         Boolean verifcare2 = numarulUnu < numarulDoi;
-        if (verifcare) {
+        if (verifcare1) {
             System.out.println("Numarul " + numarulUnu + " este mai mare decat " + numarulDoi);
         } else if (verifcare2) {
             System.out.println("Numarul " + numarulUnu + " este mai mic " + numarulDoi);
@@ -175,11 +151,20 @@ public class Homework {
 //    }
 
     public static void weatherCondition(Boolean isSunny, Boolean isWarm, Boolean chanceOfRain) {
-        Boolean shouldGo = (isSunny && isWarm) || (!isSunny && isWarm && !chanceOfRain);
+        Boolean shouldGo = (isSunny && isWarm && !chanceOfRain) || (!isSunny && isWarm && !chanceOfRain);
         if (shouldGo) {
             System.out.println(" Mergi la plimare");
         } else System.out.println("Stai in casa");
     }
+
+    public static void weatherCondition2(Boolean isSunny, Boolean isWarm, Boolean chanceOfRain) {
+        Boolean shouldGo = (isSunny && isWarm && !chanceOfRain) || (!isSunny && isWarm && !chanceOfRain);
+        System.out.println("Go out" + shouldGo);
+
+    }
+
+
+
     //   Char (char) Exercises
     //   Exercitiu 3
     //   Print a Character
@@ -197,11 +182,16 @@ public class Homework {
 //    Concatenate Character with String
 
     public static void convertCharacter() {
-        char letter = 'A';
-        char mask = (char) ('a') ^ ('A');      //?
-        char converted = (char) (letter ^ mask);  //?
-        System.out.println("Original: " + letter);
-        System.out.println("Converted: " + converted);
+        char lowercase = 'a';
+        char uppercase = 'A';
+
+        // Convert cases using ASCII values
+        char convertedToUpper = (char) (lowercase - 32); // Convert 'a' to 'A'
+        char convertedToLower = (char) (uppercase + 32); // Convert 'A' to 'a'
+
+        // Print results
+        System.out.println("Lowercase original " + lowercase +" to Uppercase: " + convertedToUpper);
+        System.out.println("Uppercase original "+ uppercase +" to Lowercase: " + convertedToLower);
     }
 //    Char (char) Exercises
 //    Exercitiu 2
@@ -262,23 +252,79 @@ public class Homework {
 //    and prints their sum, difference, multiplication, and division.
 //    Make sure to handle division by zero gracefully.
 
-    public static void operatiiMatematice(Integer numarulUnu, Integer numarulDoi) {
+    public static void operatiiMatematice(Integer firstUserNumber, Integer secondUserNumber) {
 
-        Integer sumaNumere = numarulUnu + numarulDoi;
-        Integer diferentaNumere = Math.subtractExact(numarulUnu, numarulDoi);
-        Integer imultireNumere = numarulUnu * numarulDoi;
-        Integer impartireNumere = numarulUnu / numarulDoi;
-        System.out.println("Suma numarelor: " + numarulUnu + " si " + numarulDoi + " este egala cu " + sumaNumere);
-        System.out.println("Diferenta numarelor: " + numarulUnu + " si " + numarulDoi + " este egala cu " + diferentaNumere);
-        System.out.println("Inmultirea numarelor: " + numarulUnu + " si " + numarulDoi + " este egala cu " + imultireNumere);
-        System.out.println("Impartirea numarelor: " + numarulUnu + " si " + numarulDoi + " este egala cu " + impartireNumere);
+        int adunare = firstUserNumber + secondUserNumber;
+        int scadere = firstUserNumber - secondUserNumber;
+        int inmultire = firstUserNumber * secondUserNumber;
+        String impartire;
+
+        if (secondUserNumber != 0) {
+            impartire = String.valueOf((double) firstUserNumber / secondUserNumber);
+        } else {
+            impartire = "Imposibil (împărțire la zero)";
+        }
+
+        // Displaying results
+        System.out.println("Adunare: " + adunare);
+        System.out.println("Scădere: " + scadere);
+        System.out.println("Înmulțire: " + inmultire);
+        System.out.println("Împărțire: " + impartire);
     }
 
+
+
+//      Only on Main !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//    public static void operatiiMatematice() {
+//        Scanner scaner = new Scanner(System.in);
+//        System.out.println("Introdu doua numer si atomat se vor face operatiunile de adunare, scadere, imultire si impartire");
+//
+//
+//        System.out.println("Introdu primul numare");
+//        Integer firstUserNumber = scaner.nextInt();
+//        System.out.println("Introudu al doilea numar");
+//        Integer secondUserNumber = scaner.nextInt();
+//
+//        // Performing operations
+//        int adunare = firstUserNumber + secondUserNumber;
+//        int scadere = firstUserNumber - secondUserNumber;
+//        int inmultire = firstUserNumber * secondUserNumber;
+//        String impartire;
+//
+//        if (secondUserNumber != 0) {
+//            impartire = String.valueOf((double) firstUserNumber / secondUserNumber);
+//        } else {
+//            impartire = "Imposibil (împărțire la zero)";
+//        }
+//
+//        // Displaying results
+//        System.out.println("Adunare: " + adunare);
+//        System.out.println("Scădere: " + scadere);
+//        System.out.println("Înmulțire: " + inmultire);
+//        System.out.println("Împărțire: " + impartire);
+//
+//
+//
+//    }
+            // REZOLVAT IN MAIN DOAR ACOLO MERGE SCANER
 //    Operators
 //    Exercitiu 2
 //    Modulus Magic: Write a Java program that checks if a number (input from the user)
 //    is even or odd without using any conditional statements
 //    (hint: use the modulus operator).
+
+
+//    public static void modulusMagic() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter a number: ");
+//        int num = scanner.nextInt();
+//        scanner.close();
+//
+//        String[] result = {"Even", "Odd"}; //Instead of using if statements, we use an array result where result[0] is "Even" and result[1] is "Odd".
+//        System.out.println("The number is " + result[num % 2]); //The expression result[num % 2] selects the correct string based on the remainder.
+//    }
+
+
 
 // REZOLVAT IN MAIN DOAR ACOLO MERGE SCANER
 
@@ -383,14 +429,26 @@ public class Homework {
             System.out.println("Parola puternica, numarul de caractere este " + nrOfCharacters + ", numarul de numere este " + nrOfDigits + ", numarul de litere este " + nrOfLetters);
 
         }
-
-
-        //    Password Checker: Implement a simple password strength checker in Java.
-//    If the password length is less than 8 characters, print "Weak Password".
-//    If it has 8 or more characters but doesn't contain any number, print "Moderate Password". If it meets both conditions, print "Strong Password".
-
-
     }
+    // REZOLVAT IN MAIN DOAR ACOLO MERGE SCANER
+
+//    public static void charRad() {
+//        Scanner scanner=new Scanner(System.in);
+//        System.out.println("Inrodu parola");
+//        String parola = scanner.next();
+//        int nrcharcter=parola.length();
+//        boolean textHasNumber=parola.matches(".*\\d.*");
+//        System.out.println("Nr charactere este " + nrcharcter);
+//
+//        if (nrcharcter<8){
+//            System.out.println("Weeck passord, nr of character is " + nrcharcter + " you have to have more than 8");
+//        } else if (nrcharcter>8 && !textHasNumber) {
+//            System.out.println("Parola moderata ");
+//
+//        }
+//        else System.out.println("Parola puternica");
+//    }
+
 
     public static void password2() {
         String parola = "zxcvbn";
@@ -669,14 +727,43 @@ public class Homework {
 //            System.out.println("Nu ai ghicit numarul, nr corect era  " + nrToGuess);
 //
 //    }
-    //    If Blocks
-//    Exercitiu 1
-//    Password Checker: Implement a simple password strength checker in Java.
-//    If the password length is less than 8 characters, print "Weak Password".
-//    If it has 8 or more characters but doesn't contain any number, print "Moderate Password". If it meets both conditions, print "Strong Password".
+
+
+
+//    public static void Radu2() {
+//        Random random = new Random();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        // Randomly generate a number between 1 and 10 (inclusive)
+//        int numberToGuess = random.nextInt(10) + 1;
+//        int maxAttempts = 5;
+//        int userGuess;
+//
+//        System.out.println("I'm thinking of a number between 1 and 10.");
+//        System.out.println("You have " + maxAttempts + " attempts to guess it correctly!");
+//
+//        // Use a for-loop to allow up to 5 guesses
+//        for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+//            System.out.print("Attempt " + attempt + ": Enter your guess -> ");
+//            userGuess = scanner.nextInt();
+//
+//            if (userGuess == numberToGuess) {
+//                System.out.println("Congratulations! You guessed the correct number.");
+//                break;  // Exit the loop if guessed correctly
+//            } else if (userGuess < numberToGuess) {
+//                System.out.println("Too low!");
+//            } else {
+//                System.out.println("Too high!");
+//            }
+//        }
+//        System.out.println("Sorry! The number I was thinking of was: " + numberToGuess);
+//        scanner.close();
+//    }
+
 
 
     //        For-Each Loop
+    //        Exercitiu 1
 //        Multiplication Table: Write a Java program that prints out the multiplication table for a number up to 10.
 //        For example, if the user inputs 3, your program should print the multiplication table
 //        for 3 (3 x 1 = 3, 3 x 2 = 6, ..., 3 x 10 = 30) using a for loop.
@@ -693,10 +780,18 @@ public class Homework {
         int [] range = {1,2,3,4,5,6,7,8,9,10};
         System.out.println("Taba inmultirii pt numarul " +nrUser);
 
+        //In each iteration, i takes the value of an element from the array (from 1 to 10).
         for (int i :range){
             System.out.println(nrUser + "*" + i + " = " + nrUser*i);
         }
 
     }
 
-}
+    }
+
+
+
+
+
+
+

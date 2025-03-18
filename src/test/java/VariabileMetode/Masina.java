@@ -2,6 +2,10 @@ package VariabileMetode;
 
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Masina {
     public String marca;
     public String model;
@@ -9,10 +13,10 @@ public class Masina {
 
 @Test
 public  void  metodaTest(){
-    dateMasina("Audi", "Q7",2023 );
-    dateMasina("BMV", "X5",2026 );
-    calculMedie(4.5, 8.7);
-    calculMedie(8.4, 9.7);
+//    dateMasina("Audi", "Q7",2023 );
+//    dateMasina("BMV", "X5",2026 );
+//    calculMedie(4.5, 8.7);
+//    calculMedie(8.4, 9.7);
 
 
 }
@@ -33,6 +37,9 @@ public  void  metodaTest(){
         Double rezultat = (nota1 + nota2) / 2;
         System.out.println("Media celor doua numere este: " + rezultat);
     }
+
+
+
 
 
     }

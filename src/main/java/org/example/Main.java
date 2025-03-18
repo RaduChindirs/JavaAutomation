@@ -1,7 +1,6 @@
 package org.example;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -16,18 +15,25 @@ public class Main {
 //            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
 //            System.out.println("i = " + i);
 //        }
-        // citireNote();
+        //citireNote();
         // printareValoriWhile();
         //printareValoreDoWhile();
         // printareValoriFor();
         //checkNumber();
         //ziuaSaptamanii();
-        calculator();
+        // calculator();
         //firstPozitiveNumber();
         //  skipNegativeNumber();
         //skipNegativenumber2 ();
         //   Radu1();
+        //animals();
+        //game();
+        //Radu2();
+        //firstPozitiveDivizor();
 
+        //game4();
+        //semafor6();
+       // calculeRadu();
 
     }
 
@@ -63,7 +69,7 @@ public class Main {
 
     public static void printareValoriFor() {
         // int valoare = 1;
-        for (int valoare = 8; valoare <= 10; valoare++) {
+        for (int valoare = 1; valoare <= 10; valoare++) {
             System.out.println("Valoarea aste " + valoare);
         }
     }
@@ -73,7 +79,7 @@ public class Main {
 //    Modulus Magic: Write a Java program that checks if a number (input from the user)
 //    is even or odd without using any conditional statements
 //    (hint: use the modulus operator).
-    public static void checkNumber() {
+    public static void checkNumber6() {
         Scanner scaner = new Scanner(System.in);
         System.out.println("Introdu un numar");
 
@@ -163,7 +169,8 @@ public class Main {
 //    Find the First Positive Divisor:
 //    Write a Java program that finds the first positive divisor (other than 1) of a number entered by the user.
 //    Use a loop and a break statement when the divisor is found.
-    public static void firstPozitiveNumber() {
+
+    public static void firstPozitiveNumber3() {
         Scanner scaner = new Scanner(System.in);
         System.out.println("Intordu un numar");
 
@@ -247,8 +254,51 @@ public class Main {
     }
 
 
+//    De stersssssssssssssssssssssssssssssssssss
+
+
+
+
+
+
+    public static void calculator2() {
+        Scanner scaner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Iroudu un an");
+            int year = scaner.nextInt();
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+
+                    }
+                }
+                System.out.println("It is a leep year");
+            } else {
+                System.out.println("Is not a leap year");
+            }
+            System.out.println("Incercare noua");
+        }
+    }
+
+
+//    boolean isLeapYear = false;
+//
+//        if (year % 4 == 0) {
+//        if (year % 100 == 0) {
+//            if (year % 400 == 0) {
+//                isLeapYear = true;  // Divisible by 400 → Leap year
+//            }
+//        } else {
+//            isLeapYear = true;  // Divisible by 4 but not by 100 → Leap year
+//        }
+//    }
+//
+//    // Display result
+//        if (isLeapYear) {
+//        System.out.println(year + " is a Leap Year.");
+//    } else {
+//        System.out.println(year + " is NOT a Leap Year.");
+
+
 }
-
-
-
 
