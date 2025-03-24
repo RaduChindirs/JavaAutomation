@@ -33,7 +33,11 @@ public class Main {
 
         //game4();
         //semafor6();
-       // calculeRadu();
+        // factorialCalculator ();
+        //  countDownTimer();
+      //  inputSommation();
+     //   guessingNumber ();
+        palindomeChecker ();
 
     }
 
@@ -257,10 +261,6 @@ public class Main {
 //    De stersssssssssssssssssssssssssssssssssss
 
 
-
-
-
-
     public static void calculator2() {
         Scanner scaner = new Scanner(System.in);
         while (true) {
@@ -300,5 +300,80 @@ public class Main {
 //        System.out.println(year + " is NOT a Leap Year.");
 
 
+    public static void factorialCalculator() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introdu un nr pt care sa se calculeze factorialu");
+        int userNumber = scanner.nextInt();
+        int factorial = 1;
+        for (int i = 1; i <= userNumber; i++) {
+            factorial *= i;
+
+        }
+        System.out.println("Factorialul numarului " + userNumber + " este egal cu " + factorial);
+        scanner.close();
+
+
+    }
+
+    public static void countDownTimer() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get user input
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        // Count vowels
+        // int vowelCount = countVowels(input);
+
+        // Display result
+        // System.out.println("Number of vowels: " + vowelCount);
+
+        scanner.close();
+    }
+
+    public static void inputSommation() {
+        Scanner scaner = new Scanner(System.in);
+        int suma=0;
+
+
+        while (true){
+            System.out.println("Enter a number and make the summ of all number");
+            int userNumbers= scaner.nextInt();
+
+            if (userNumbers==0){
+                break;
+            }
+           else  suma+=userNumbers;
+        }
+        System.out.println("suma " + suma);
+    }
+    public static void guessingNumber(){
+        Scanner scaner=new Scanner(System.in);
+        Random random=new Random();
+        int numberToGuess = random.nextInt(100) + 1;
+        System.out.println("Ghiceste un numar de la 1 la 100.");
+        while (true){
+            System.out.println("Introdu numarul tau");
+            int userNumber= scaner.nextInt();
+            if (userNumber==numberToGuess){
+                System.out.println("Felicitari ai ghicit numarul, numarul era " + numberToGuess);
+                break;
+            } else if (userNumber<numberToGuess) {
+                System.out.println("User number este mai mic decat numarul de ghicit");
+            }
+            else {
+                System.out.println("Numarul este prea mare");
+            }
+        }
+    }
+    public static void palindomeChecker (){
+        Scanner scaner=new Scanner(System.in);
+        System.out.println("Introud un sting");
+        String userWord= scaner.next();
+        while (true){
+
+        }
+
+    }
 }
 

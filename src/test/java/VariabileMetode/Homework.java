@@ -27,20 +27,21 @@ public class Homework {
 //       modulusMagic
 //       compondAssignments();
 //       score();
-//       passwordChecker();
-
+//       passwordChecker();+
+//        countDownTimer(8);
+//        countVowels ("Hello word ");
 
 
 //        isLeapYear(2024);
 //        calculator();
 //        traficLifght2("rosu");
- //       categoriObiecte();
+        //       categoriObiecte();
 //        tablaInmultirii(2);
-//        tablaInmultiriiEachFor(4);
-//        tabalaInmultiriiRadu(4);
+  //      findMaximum ();
+ //       tabalaInmultiriiRadu();
+        //       categoriObiecte();
+        evenNumber();
     }
-
-
 
 
 //    Integer (int) Exercises
@@ -67,7 +68,7 @@ public class Homework {
 //    Initialize an integer side representing the side of a square. Calculate and print the area of the square
     public static void ariaPatrat(Integer latura) {
         Integer ariaPatratCalculata = latura * latura;
-        System.out.println("Aria patratului cu latura " + latura+ " este egala cu  " + ariaPatratCalculata);
+        System.out.println("Aria patratului cu latura " + latura + " este egala cu  " + ariaPatratCalculata);
     }
 
     //    Double (double) Exercises
@@ -164,7 +165,6 @@ public class Homework {
     }
 
 
-
     //   Char (char) Exercises
     //   Exercitiu 3
     //   Print a Character
@@ -190,8 +190,8 @@ public class Homework {
         char convertedToLower = (char) (uppercase + 32); // Convert 'A' to 'a'
 
         // Print results
-        System.out.println("Lowercase original " + lowercase +" to Uppercase: " + convertedToUpper);
-        System.out.println("Uppercase original "+ uppercase +" to Lowercase: " + convertedToLower);
+        System.out.println("Lowercase original " + lowercase + " to Uppercase: " + convertedToUpper);
+        System.out.println("Uppercase original " + uppercase + " to Lowercase: " + convertedToLower);
     }
 //    Char (char) Exercises
 //    Exercitiu 2
@@ -273,7 +273,6 @@ public class Homework {
     }
 
 
-
 //      Only on Main !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //    public static void operatiiMatematice() {
 //        Scanner scaner = new Scanner(System.in);
@@ -306,7 +305,7 @@ public class Homework {
 //
 //
 //    }
-            // REZOLVAT IN MAIN DOAR ACOLO MERGE SCANER
+    // REZOLVAT IN MAIN DOAR ACOLO MERGE SCANER
 //    Operators
 //    Exercitiu 2
 //    Modulus Magic: Write a Java program that checks if a number (input from the user)
@@ -323,7 +322,6 @@ public class Homework {
 //        String[] result = {"Even", "Odd"}; //Instead of using if statements, we use an array result where result[0] is "Even" and result[1] is "Odd".
 //        System.out.println("The number is " + result[num % 2]); //The expression result[num % 2] selects the correct string based on the remainder.
 //    }
-
 
 
 // REZOLVAT IN MAIN DOAR ACOLO MERGE SCANER
@@ -729,7 +727,6 @@ public class Homework {
 //    }
 
 
-
 //    public static void Radu2() {
 //        Random random = new Random();
 //        Scanner scanner = new Scanner(System.in);
@@ -760,37 +757,214 @@ public class Homework {
 //        scanner.close();
 //    }
 
-
-
-    //        For-Each Loop
-    //        Exercitiu 1
+    //            For Loop
+//            Exercitiu 1
 //        Multiplication Table: Write a Java program that prints out the multiplication table for a number up to 10.
 //        For example, if the user inputs 3, your program should print the multiplication table
 //        for 3 (3 x 1 = 3, 3 x 2 = 6, ..., 3 x 10 = 30) using a for loop.
+    public static void tablaInmultiriiEachFor4(int nrUser) {
+        for (int i = 0; i <= 10; i++) {
 
+            System.out.println("Tabla inmultire cu " + nrUser + " . " + i + "*" + nrUser + " = " + i * nrUser);
 
-    public  static void tablaInmultirii (Integer numar){
-        for (int i=0; i<=10; i++){
-            System.out.println("Tbla inmultirii cu  " + numar + ", "+ i +" * " + numar + " = "  + i*numar);
         }
-
     }
 
-    public static void tablaInmultiriiEachFor (int nrUser){
-        int [] range = {1,2,3,4,5,6,7,8,9,10};
-        System.out.println("Taba inmultirii pt numarul " +nrUser);
 
+    public static void tablaInmultiriiEachFor(int nrUser) {
+        int[] range = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.println("Taba inmultirii pt numarul " + nrUser);
         //In each iteration, i takes the value of an element from the array (from 1 to 10).
-        for (int i :range){
-            System.out.println(nrUser + "*" + i + " = " + nrUser*i);
+        for (int i : range) {
+            System.out.println(nrUser + "*" + i + " = " + nrUser * i);
         }
 
     }
-     //        Exercitiu 2
+    //        Exercitiu 2
     // Factorial Calculator: Create a program that calculates the factorial of a number provided by the user. Use a for loop to calculate the factorial.
     // Remember, the factorial of n (n!) is the product of all positive integers less than or equal to n.
 
+    public static void factorialCalculator() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introdu un nr pt care sa se calculeze factorialu");
+        int userNumber = scanner.nextInt();
+        int factorial = 1;
+        for (int i = 1; i <= userNumber; i++) {
+            factorial *= i;
+        }
+        System.out.println("Factorialul numarului " + userNumber + " este egal cu " + factorial);
+        scanner.close();
     }
+
+    //            Exercitiu 2
+//    Countdown Timer: Implement a countdown timer that takes a number from the user and counts down to 0, printing each number.
+//    Use a for loop for the countdown, and make sure to include a sleep of 1 second between each print to simulate a real timer.
+
+
+    public static void countDownTimer(int userNumber) {
+//      Scanner scaner=new Scanner(System.in);
+//      System.out.println("Intorud un nr pt care sa se faca countdown");
+//      int userNumber= scaner.nextInt();
+        for (int i = userNumber; i >= 0; i--) {
+            System.out.println("Radu " + i);
+        }
+    }
+//    For-Each Loop
+//    Exercitiu 2
+//    Find the Maximum: Write a Java program that finds the maximum value in an array of integers. Use a for-each loop to iterate through the array.
+//    You can initialize the array with some values or take the input from the user.
+
+    public static void findMaximum() {
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10,33};
+        int max = Integer.MIN_VALUE;
+        for (int num : numbers) {
+            if (num > max){
+                max=num;
+            }
+        }
+        System.out.println("The maximum value in the array is: " + max);
+    }
+//      Exercitiu 2
+//    Count Vowels: Create a program that counts the number of vowels in a given string.
+//    Use a for-each loop to iterate through the characters of the string. Consider A, E, I, O, U as vowels for this exercise.
+//    public  static void countVowels (String cuvant){
+//        for (int i=0; i<=cuvant.length(); i++){
+//            System.out.println("Print " + i);
+//        }
+
+
+//    public  static void countVowels (){
+//      String cuvant="asdreii";
+//       int nrVocale=countVowels(cuvant);
+//        System.out.println("Radu " + nrVocale);
+//
+//    }
+
+//    public  static void countVowels (){
+//        String input = "aaassss";
+//
+//        // Count vowels
+//        int vowelCount = countVowels(input);
+//
+//        // Display result
+//        System.out.println("Number of vowels: " + vowelCount);
+//
+//    }
+
+public static int countVowels(String str) {
+    int count = 0;
+    String vowels = "AEIOU";
+
+    // Convert the string to uppercase to handle case insensitivity
+    str = str.toUpperCase();
+
+    // Convert string to char array and use a for-each loop
+    for (char ch : str.toCharArray()) {
+        if (vowels.indexOf(ch) != -1) { // Check if the character is in the vowels string
+            count++;
+        }
+    }
+    return count;
+
+}
+//    Exercitiu 3
+//    Sum of Even Numbers: Given an array of integers,
+//    write a Java program that calculates the sum of all even numbers in the array using a for-each loop.
+//    You can hardcode the array or take input from the user.
+
+    public static void evenNumber (){
+        int [] numbers={6,7,8};
+        int sumaNrPar=0;
+
+        for (int num :numbers){
+            if (num%2==0){
+                sumaNrPar+=num;
+            }
+        }
+        System.out.println("Suma numerelor pare din stringul date este " +sumaNrPar);
+    }
+//    While Loops
+//    Input Summation: Write a Java program that continuously takes numbers as input from the user and adds them to a sum.
+//    The loop should continue until the user enters 0, at which point the program should print the final sum and exit.
+
+    public static void inputSommation() {
+        Scanner scaner = new Scanner(System.in);
+        int suma=0;
+        while (true){
+            System.out.println("Enter a number and make the summ of all number");
+            int userNumbers= scaner.nextInt();
+
+            if (userNumbers==0){
+                break;
+            }
+            else  suma+=userNumbers;
+        }
+        System.out.println("suma " + suma);
+    }
+//    Exercitiu 2
+//    Guessing Game: Implement a guessing game where the program selects a random number between 1 and 100,
+//    and the user has to guess it.
+//    Use a while loop to allow the user unlimited attempts until they guess the number correctly.
+//    After each guess, the program should tell the user if the guess is too high or too low.
+
+    public static void guessingNumber(){
+    Scanner scaner=new Scanner(System.in);
+    Random random=new Random();
+    int numberToGuess = random.nextInt(100) + 1;
+    System.out.println("Ghiceste un numar de la 1 la 100.");
+    while (true){
+        System.out.println("Introdu numarul tau");
+        int userNumber= scaner.nextInt();
+        if (userNumber==numberToGuess){
+            System.out.println("Felicitari ai ghicit numarul, numarul era " + numberToGuess);
+            break;
+        } else if (userNumber<numberToGuess) {
+            System.out.println("User number este mai mic decat numarul de ghicit");
+        }
+        else {
+            System.out.println("Numarul este prea mare");
+        }
+    }
+}
+//    Exercitiu 3
+//    Palindrome Checker: Create a Java program that checks if a given string is a palindrome.
+//    Use a while loop to compare characters from the beginning and the end of the string, moving towards the center.
+//    A palindrome reads the same backward as forward, like "radar" or "level".
+public static void palidromeChecker (){
+    Scanner scanner = new Scanner(System.in);
+
+    // Step 1: Ask user for input
+        System.out.print("Enter a word to check if it's a palindrome: ");
+    String input = scanner.nextLine();
+
+    // Optional: Normalize input (remove spaces and make lowercase)
+    String word = input.replaceAll("\\s+", "").toLowerCase();
+
+    // Step 2: Use two pointers
+    int left = 0;
+    int right = word.length() - 1;
+    boolean isPalindrome = true;
+
+    // Step 3: Check characters from both ends
+        while (left < right) {
+        if (word.charAt(left) != word.charAt(right)) {
+            isPalindrome = false;
+            break; // No need to check further
+        }
+        left++;
+        right--;
+    }
+
+    // Step 4: Display result
+        if (isPalindrome) {
+        System.out.println("Yes! \"" + input + "\" is a palindrome.");
+    } else {
+        System.out.println("Nope! \"" + input + "\" is not a palindrome.");
+    }
+
+        scanner.close();
+}
+}
 
 
 
